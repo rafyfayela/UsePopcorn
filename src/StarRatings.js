@@ -53,6 +53,7 @@ StarRating.propTypes = {
   messages: propTypes.array,
   color: propTypes.string,
   className: propTypes.string,
+  onSetRating: propTypes.func,
 };
 
 const ContainerStyle = {
@@ -72,10 +73,12 @@ export default function StarRating({
   className = "",
   messages = [],
   DefaultRating = 3,
+  onSetRating,
 }) {
   const [Rating, SetRating] = useState(DefaultRating);
   function handleRating(rating) {
     SetRating(rating);
+    onSetRating(rating);
   }
   const [tempRating, setTempRating] = useState(0);
   const textStyle = {
