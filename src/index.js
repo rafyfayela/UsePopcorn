@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import StarRatings from "./StarRatings.js";
 import "./index.css";
-import App from "./App";
+// import App from "./App";
+import App from "./App-v2.js";
 // function Test() {
 //   const [movieRating, setMovieRating] = useState(0);
 //   return (
